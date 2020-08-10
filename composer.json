@@ -1,5 +1,5 @@
 {
-    "name": "kosinix/grafika",
+    "name": "persiliao/grafika",
     "description": "An image manipulation library for PHP.",
     "keywords": ["grafika"],
     "homepage": "http://kosinix.github.io/grafika",
@@ -12,11 +12,14 @@
         {
             "name": "Nico Amarilla",
             "homepage": "https://www.kosinix.com"
+        },
+        {
+            "name": "Persi Liao",
+            "homepage": "https://www.github.com/persiliao"
         }
     ],
     "require": {
-        "php": ">=5.3",
-        "ext-imagick": "*"
+        "php": ">=5.3"
     },
     "autoload": {
         "psr-4": {
