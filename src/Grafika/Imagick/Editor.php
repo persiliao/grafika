@@ -378,7 +378,7 @@ final class Editor implements EditorInterface
         $opacity = ($opacity > 1) ? 1 : $opacity;
         $opacity = ($opacity < 0) ? 0 : $opacity;
 
-        $image->getCore()->setImageOpacity($opacity);
+        $image->getCore()->setImageAlpha($opacity);
 
         return $this;
     }
@@ -614,7 +614,7 @@ final class Editor implements EditorInterface
         $targetDir = dirname($file); // $file's directory
         if (false === is_dir($targetDir)) { // Check if $file's directory exist
             // Create and set default perms to 0755
-            if ( ! mkdir($targetDir, $permission, true)) {
+            if (!mkdir($targetDir, $permission, true) && !is_dir($targetDir)) {
                 throw new \Exception(sprintf('Cannot create %s', $targetDir));
             }
         }
